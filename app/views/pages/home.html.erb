@@ -1,7 +1,14 @@
 <div class="jumbotron center">
 <h1>Welcome to Dona Branca's Brazilian Sweets'</h1>
 <p>The newest sweets to hit the Canadian Market.</p>
-  <%= link_to "Login", "#", class: "btn btn-default btn-lg" %>
-  <%= link_to "Sign up", "#", class: "btn btn-primary btn-lg" %>
+
+	<% if user_signed_in? %>
+		# do something
+	<% else %>
+  		<%= link_to "Login", new_user_session_path, class: "btn btn-default btn-lg" %>
+  		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+  	<% end %> 
+
+
 </div>
 
